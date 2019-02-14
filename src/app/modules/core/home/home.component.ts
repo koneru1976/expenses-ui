@@ -31,7 +31,8 @@ export class HomeComponent implements OnInit {
 
     const isAuthenticationSuccess = this.loginForm.value['username'] === 'admin' && this.loginForm.value['password'] === 'admin';
     if (isFormValid && isAuthenticationSuccess) {
-      this.router.navigate(['dashboard']);
+      console.log('Navigating to dashboard');
+      this.router.navigate(['/dashboard']);
     }
   }
 }
