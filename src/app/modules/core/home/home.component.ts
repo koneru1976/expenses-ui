@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-home',
@@ -31,8 +30,7 @@ export class HomeComponent implements OnInit {
 
     const isAuthenticationSuccess = this.loginForm.value['username'] === 'admin' && this.loginForm.value['password'] === 'admin';
     if (isFormValid && isAuthenticationSuccess) {
-      console.log('Navigating to dashboard');
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['dashboard']);
     }
   }
 }
